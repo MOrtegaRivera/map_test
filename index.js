@@ -38,8 +38,7 @@ const coberturaForestal = L.esri.featureLayer({
 });
 
 const tmf2024 = L.esri.featureLayer({
-  url: "https://services5.arcgis.com/LF48CxpifRE4aglv/arcgis/rest/services/TMF_2024/FeatureServer/0",
-  style: () => ({ color: "#00A884", weight: 1, fillColor: "#00FFC5", fillOpacity: 0.5 })
+  url: "https://services5.arcgis.com/LF48CxpifRE4aglv/arcgis/rest/services/TMF_2024/FeatureServer/0"
 });
 
 const gfwCR = L.esri.featureLayer({
