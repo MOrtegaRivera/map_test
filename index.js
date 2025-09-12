@@ -10,10 +10,9 @@ L.tileLayer(
   {
     attribution:
       "Tiles © Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
-
-    maxNativeZoom: 13,
+    minZoom: 2,
     maxZoom: 22,
-    pane: "overlayPane",
+    maxNativeZoom: 13,
   }
 ).addTo(map);
 
@@ -101,7 +100,7 @@ tmf2024.bindPopup(function (layer) {
   const p = layer.feature.properties;
   return `
     <b>TMF: </b><br>
-     ${p.Alerta ?? "—"}<br>
+     ${p.Descripcio ?? "—"}<br>
   `;
 });
 
@@ -121,7 +120,7 @@ const overlays = {
   "Global Forest Watch": gfwCR,
   "Territorios Indígenas": territoriosIndigenas,
   "Áreas Protegidas": areasProtegidas,
-  "Cobertura Forestal": coberturaForestal,
+  "Cobertura Forestal": coberturaForestal
   //"TMF 2024 (Tiles)": tmfTile2024
 };
 L.control.layers(null, overlays, { collapsed: false }).addTo(map);
