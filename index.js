@@ -122,7 +122,7 @@ const overlays = {
   "Territorios Indígenas": territoriosIndigenas,
   "Áreas Protegidas": areasProtegidas,
   "Cobertura Forestal": coberturaForestal,
-  "TMF 2024 (Tiles)": tmfTile2024
+  //"TMF 2024 (Tiles)": tmfTile2024
 };
 L.control.layers(null, overlays, { collapsed: false }).addTo(map);
 
