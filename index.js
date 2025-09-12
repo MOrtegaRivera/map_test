@@ -100,7 +100,7 @@ tmf2024.bindPopup(function (layer) {
   const p = layer.feature.properties;
   return `
     <b>TMF: </b><br>
-     ${p.Descripcio ?? "—"}<br>
+     ${p.Alerta ?? "—"}<br>
   `;
 });
 
