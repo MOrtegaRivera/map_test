@@ -10,7 +10,7 @@ L.tileLayer(
   {
     attribution:
       "Tiles © Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
-      
+
     maxNativeZoom: 13,
     maxZoom: 22,
     pane: "overlayPane",
@@ -48,14 +48,14 @@ const gfwCR = L.esri.featureLayer({
   style: () => ({ color: "#C500FF", weight: 1, fillColor: "#A900E6", fillOpacity: 0.5 })
 });
 
-//TMF tiles (overlay)
+/*TMF tiles (overlay)
 const tmfTile2024 = L.esri.tiledMapLayer({
   url: "https://tiles.arcgis.com/tiles/LF48CxpifRE4aglv/arcgis/rest/services/TMF_2024_CR/MapServer",
   maxZoom: 22,
   maxNativeZoom: 13,
 }).addTo(map);
 
-map.setMaxZoom(13);
+map.setMaxZoom(13);*/
 
 // Popup directo por capa 
 // buffer60m
@@ -101,7 +101,7 @@ tmf2024.bindPopup(function (layer) {
   const p = layer.feature.properties;
   return `
     <b>TMF: </b><br>
-     ${p.Descripcio ?? "—"}<br>
+     ${p.Alerta ?? "—"}<br>
   `;
 });
 
