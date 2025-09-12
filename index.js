@@ -41,6 +41,8 @@ const tmf2024 = L.esri.featureLayer({
   url: "https://services5.arcgis.com/LF48CxpifRE4aglv/arcgis/rest/services/TMF_2024/FeatureServer/0"
 });
 
+tmf2024.once("load", () => map.fitBounds(tmf2024.getBounds()));
+
 const gfwCR = L.esri.featureLayer({
   url: "https://services5.arcgis.com/LF48CxpifRE4aglv/arcgis/rest/services/GFW_CR/FeatureServer/0",
   style: () => ({ color: "#C500FF", weight: 1, fillColor: "#A900E6", fillOpacity: 0.5 })
