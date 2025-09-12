@@ -11,8 +11,8 @@ L.tileLayer(
     attribution:
       "Tiles © Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
     minZoom: 2,
-    maxZoom: 16,
-    maxNativeZoom: 16
+    maxZoom: 22,
+    maxNativeZoom: 13,
   }
 ).addTo(map);
 
@@ -47,15 +47,15 @@ const gfwCR = L.esri.featureLayer({
   style: () => ({ color: "#C500FF", weight: 1, fillColor: "#A900E6", fillOpacity: 0.5 })
 });
 
-/*TMF tiles (overlay)
+//TMF tiles (overlay)
 const tmfTile2024 = L.esri.tiledMapLayer({
   url: "https://tiles.arcgis.com/tiles/LF48CxpifRE4aglv/arcgis/rest/services/TMF_2024_CR/MapServer",
-  maxZoom: 16,
-  maxNativeZoom: 16,
-  opacity: 0.9
+  maxZoom: 22,
+  maxNativeZoom: 13,
+  detectRetina: true
 }).addTo(map);
 
-map.setMaxZoom(16);*/
+map.setMaxZoom(13);
 
 // Popup directo por capa 
 // buffer60m
@@ -122,7 +122,7 @@ const overlays = {
   "Territorios Indígenas": territoriosIndigenas,
   "Áreas Protegidas": areasProtegidas,
   "Cobertura Forestal": coberturaForestal,
-  //"TMF 2024 (Tiles)": tmfTile2024
+  "TMF 2024 (Tiles)": tmfTile2024
 };
 L.control.layers(null, overlays, { collapsed: false }).addTo(map);
 
