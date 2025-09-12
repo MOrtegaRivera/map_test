@@ -52,7 +52,6 @@ const tmfTile2024 = L.esri.tiledMapLayer({
   url: "https://tiles.arcgis.com/tiles/LF48CxpifRE4aglv/arcgis/rest/services/TMF_2024_CR/MapServer",
   maxZoom: 22,
   maxNativeZoom: 13,
-  detectRetina: true
 }).addTo(map);
 
 map.setMaxZoom(13);
