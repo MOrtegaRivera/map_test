@@ -26,25 +26,6 @@ const buffer60m = L.esri.featureLayer({
   style: () => ({ color: "#00C5FF", weight: 1.5, fillColor: "#98D27D", fillOpacity: 0.49 })
 });
 
-let oldID;
-
-buffer60m.on("mouseout", function (e) {
-  document.getElementById("info-pane").innerHTML = "Hover to Inspect";
-  buffer60m.resetFeatureStyle(oldID);
-});
-
-buffer60m.on("mouseover", function (e) {
-  oldID = e.layer.feature.id;
-  document.getElementById("info-pane").innerHTML =
-    e.layer.feature.properties.ID + " ";
-  buffer60m.setFeatureStyle(e.layer.feature.id, {
-    color: "#9D78D2",
-    weight: 3,
-    opacity: 1
-  });
-});
-
-
 const territoriosIndigenas = L.esri.featureLayer({
   url: "https://services5.arcgis.com/LF48CxpifRE4aglv/arcgis/rest/services/Terrirtorios_Indigenas_CR_2022_PV/FeatureServer/0",
   pane: "pane-low",
