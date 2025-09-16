@@ -56,7 +56,7 @@ const gfwCR = L.esri.featureLayer({
 });
 
 // Agrega las que quieras ver de inicio
-gfwCR.addTo(map);// visible al cargar
+//gfwCR.addTo(map);// visible al cargar
 //tmf2024.addTo(map);  
 // buffer60m.addTo(map);
 // territoriosIndigenas.addTo(map);
