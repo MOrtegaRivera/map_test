@@ -61,7 +61,7 @@ const gfwCR = L.esri.featureLayer({
 // buffer60m.addTo(map);
 // territoriosIndigenas.addTo(map);
 // areasProtegidas.addTo(map);
-// coberturaForestal.addTo(map);
+coberturaForestal.addTo(map);
 
 // Ajusta a la extensión del GFW cuando cargue
 gfwCR.once("load", () => {
