@@ -56,16 +56,16 @@ const gfwCR = L.esri.featureLayer({
 });
 
 // Agrega las que quieras ver de inicio
-//gfwCR.addTo(map);// visible al cargar
-//tmf2024.addTo(map);  
-// buffer60m.addTo(map);
+// gfwCR.addTo(map);// visible al cargar
+// tmf2024.addTo(map);  
+buffer60m.addTo(map);
 // territoriosIndigenas.addTo(map);
 // areasProtegidas.addTo(map);
-coberturaForestal.addTo(map);
+// coberturaForestal.addTo(map);
 
 // Ajusta a la extensión del GFW cuando cargue
-gfwCR.once("load", () => {
-  const b = gfwCR.getBounds();
+buffer60m.once("load", () => {
+  const b = buffer60m.getBounds();
   if (b && b.isValid()) map.fitBounds(b);
 });
 
