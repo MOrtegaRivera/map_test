@@ -1,6 +1,3 @@
-// Tu API key con privilegio: Location services → Basemaps
-const accessToken = "AAPTxy8BH1VEsoebNVZXo8HurK04dPmj1yL4XNsIGvAGAJoPPhX55_qk1cJRGy8ogvQ3stXYjfc2SP_k_YjSCzeNOw_IzPbQwcGIW8l-899M68Wx8DohjsdT6e0BK6tvb2K9HzsDkCrccW7-iIAbG6Iragq1c_DM0drKNq3FUxj4Ud6Gj9IzN3_243kEXeuaWk8JJhTZeVzS3Mary72rGT-bIoNyw8ZUH2NMp2IZyLc3nFw.AT1_v4cnJ2al";
-
 // Inicializamos el mapa
 const map = L.map("map", { minZoom: 2 }).setView([9.7489, -83.7534], 11);
 
