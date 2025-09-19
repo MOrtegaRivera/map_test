@@ -8,9 +8,9 @@ L.tileLayer(
   {
     attribution:
       "Tiles © Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
-    minZoom: 2,
+    /*minZoom: 2,
     maxZoom: 22,
-    maxNativeZoom: 13
+    maxNativeZoom: 13*/
   }
 ).addTo(map);
 
